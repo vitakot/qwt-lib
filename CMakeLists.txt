@@ -29,7 +29,6 @@ file(
 
 list(REMOVE_ITEM HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/src/qwt_plot_glcanvas.h")
 list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/qwt_plot_glcanvas.cpp")
-#list(REMOVE_ITEM qwt_mocs "${qwt_BINARY_DIR}/qwt/moc_qwt_plot_glcanvas.cpp")
 
 add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 target_link_libraries(${PROJECT_NAME}
@@ -40,13 +39,3 @@ target_link_libraries(${PROJECT_NAME}
         Qt::PrintSupport
         Qt::Concurrent
 )
-
-## Provede vychozi nastaveni pro sestaveni modulu
-#set_default_settings()
-#
-## Nastaveni seznamu linkovanych knihoven
-#target_link_libraries(${PROJECT_NAME} PUBLIC ${project_deps} ${QT_DEPS})
-#target_sources       (${PROJECT_NAME} PRIVATE ${qwt_mocs})
-#
-## Pridam projekt testu a povolim podporu ctest
-#add_test_project()
